@@ -39,9 +39,9 @@ export function ProductsFilter () {
 
   return (
     <section className='cont-filters-products'>
-      <h2>Filtros</h2>
+      <h2>Filters</h2>
       <div className='mark-filter'>
-        <p>Marca</p>
+        <p>Brand</p>
         <ul>
           <li>
             <input type='checkbox' id={inputMarkFilterNike} value='nike' onChange={handleMarkFilter} checked={checkboxIsCheked('nike')} />
@@ -65,7 +65,7 @@ export function ProductsFilter () {
         </ul>
       </div>
       <div className='price-mark'>
-        <label htmlFor={inputRangePrice}><strong>Precio</strong></label>
+        <label htmlFor={inputRangePrice}><strong>Price</strong></label>
         <input type='range' id={inputRangePrice} min='0' max='900' onChange={handlePriceRange} style={{ background: '#cdcdcd' }} value={filters.price} />
         <span>${filters.price}</span>
       </div>

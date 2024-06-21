@@ -7,6 +7,10 @@ header {
   }
 }
 
+body {
+  position: relative;
+}
+
 .form-search-product {
   display: flex;
   justify-content: center;
@@ -34,7 +38,7 @@ header {
     padding: 0;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
 }
@@ -95,4 +99,111 @@ header {
     list-style: none;
     padding-left: 15px;
   }
+}
+
+.modal-product-info {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.cont-product-info {
+  position: relative;
+  display: flex;
+  width: 75%;
+  height: 90vh;
+  margin: auto;
+  margin-top: calc((100vh - 90vh)/2);
+  background-color: #fff;
+  overflow-y: scroll;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .close-modal-product {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: .3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease 300ms;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.gallery-images {
+  width: 410px;
+  padding: 15px;
+}
+
+.main-image {
+  height: 300px;
+  width: 410px;
+  object-fit: cover;
+}
+
+.all-images {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.secondary-image {
+  height: 160px;
+  width: 200px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  transition: ease 300ms;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+}
+
+.product-info {
+  flex-grow: 1;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 16px;
+
+  h2 {
+    margin-top: 3rem !important;
+    font-weight: bold;
+  } 
+}
+
+.cont-sale-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  .price-modal {
+    color: green;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+.add-to-cart {
+  margin: 0;
+  margin-top: 16px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

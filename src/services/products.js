@@ -14,7 +14,11 @@ export async function getAllProducts () {
       marca: p.marca,
       precio: p.precio,
       numeroUnidades: p.numeroUnidades,
-      imagen: p.urlImagen
+      miniatura: p.miniatura,
+      imagenes: p.imagenes.map(i => ({
+        id: i.id,
+        url: i.urlImagen
+      }))
     }))
   } catch (error) {
     console.error('Error fetching products')

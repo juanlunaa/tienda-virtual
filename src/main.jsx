@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { FiltersProvider } from './context/filters.jsx'
+import { InfoProductsProvider } from './context/infoProducts.jsx'
 
 /*
 Envolvemos el componente "App" para que tenga acceso a la informacion que se definio en "FiltersContext", a su vez
@@ -9,6 +10,8 @@ los componentes que se encuentran envueltos por el componente "App" tambien tend
 */
 createRoot(document.getElementById('root')).render(
   <FiltersProvider>
-    <App />
+    <InfoProductsProvider>
+      <App />
+    </InfoProductsProvider>
   </FiltersProvider>
 )
