@@ -16,13 +16,13 @@ export function useFilters () {
   const applyFilters = (products) => {
     return products.filter(product => {
       return (
-        product.precio >= filters.price &&
+        product.price >= filters.price &&
         (
-          filters.mark.includes(formatStringToCompare(product.marca)) ||
+          filters.mark.includes(formatStringToCompare(product.brand)) ||
           filters.mark.length === 0
         ) &&
         (
-          formatStringToCompare(product.nombre).includes(formatStringToCompare(productSearch)) ||
+          formatStringToCompare(product.title).includes(formatStringToCompare(productSearch)) ||
           product === ''
         )
       )

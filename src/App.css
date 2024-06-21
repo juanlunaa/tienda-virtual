@@ -101,47 +101,6 @@ body {
   }
 }
 
-.modal-product-info {
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-}
-
-.cont-product-info {
-  position: relative;
-  display: flex;
-  width: 75%;
-  height: 90vh;
-  margin: auto;
-  margin-top: calc((100vh - 90vh)/2);
-  background-color: #fff;
-  overflow-y: scroll;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-  .close-modal-product {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    padding: .3rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: ease 300ms;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.25);
-    }
-  }
-}
-
 .gallery-images {
   width: 410px;
   padding: 15px;

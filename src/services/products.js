@@ -9,13 +9,13 @@ export async function getAllProducts () {
 
     return products?.map(p => ({
       id: p.id,
-      nombre: p.nombre,
-      descripcion: p.descripcion,
-      marca: p.marca,
-      precio: p.precio,
-      numeroUnidades: p.numeroUnidades,
-      miniatura: p.miniatura,
-      imagenes: p.imagenes.map(i => ({
+      title: p.nombre,
+      description: p.descripcion,
+      brand: p.marca,
+      price: p.precio,
+      numberUnits: p.numeroUnidades,
+      thumbnail: p.miniatura,
+      images: p.imagenes.map(i => ({
         id: i.id,
         url: i.urlImagen
       }))

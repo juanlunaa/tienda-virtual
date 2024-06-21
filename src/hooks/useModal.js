@@ -1,7 +1,19 @@
-import { useContext } from 'react'
-import { InfoProductsContext } from '../context/infoProducts.jsx'
+import { useEffect, useState } from 'react'
 
-export function useModal () {
-  const { productSelect, setProductSelect } = useContext(InfoProductsContext)
-  return { productSelect, setProductSelect }
+export function useModal (productSelect) {
+  const [openModal, setOpenModal] = useState(false)
+
+  const closeModal = () => {
+    setOpenModal(false)
+  }
+
+  useEffect(() => {
+    if (productSelect) {
+      setOpenModal(true)
+    } else {
+      setOpenModal(false)
+    }
+  }, [productSelect])
+
+  return { openModal, closeModal }
 }
