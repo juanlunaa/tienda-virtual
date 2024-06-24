@@ -13,5 +13,11 @@ export function useCart () {
     throw new Error('useCart no puede ser usado sin CartProvider')
   }
 
-  return cartContext
+  const { cart, addToCart, removeToCart, clearCart } = cartContext
+
+  const checkProductInCart = (product) => {
+    return cart.some(item => item.id === product.id)
+  }
+
+  return { cart, addToCart, removeToCart, clearCart, checkProductInCart }
 }

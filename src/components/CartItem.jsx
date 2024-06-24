@@ -5,8 +5,8 @@ export function CartItem ({ thumbnail, title, price, quantity, addToCart }) {
         src={thumbnail}
         alt={title}
       />
-      <div>
-        <strong>{title}</strong> - ${price}
+      <div id='name-price'>
+        <strong>{title}</strong><span> - ${price}</span>
       </div>
 
       <footer>

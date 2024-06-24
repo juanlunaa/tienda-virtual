@@ -3,7 +3,7 @@ import { useInfoProducts } from '../hooks/useInfoProducts.js'
 
 export function ProductInfo () {
   const { productSelect } = useInfoProducts()
-  const { title, description, numberUnits, price, images } = productSelect
+  const { thumbnail, title, description, numberUnits, price, images } = productSelect
   const mainImgRef = useRef(null)
 
   const changeMainImage = (event) => {
@@ -13,7 +13,7 @@ export function ProductInfo () {
   return (
     <>
       <div className='gallery-images'>
-        <img ref={mainImgRef} src={images[0].url} alt='Imagen principal' className='main-image' />
+        <img ref={mainImgRef} src={thumbnail} alt='Imagen principal' className='main-image' />
         <div className='all-images'>
           {images && images.map((img, index) => (
             <img key={img.id} src={img.url} alt={`${title} imagen #${index}`} className='secondary-image' onClick={changeMainImage} />

@@ -2,11 +2,7 @@ import { useCart } from '../hooks/useCart.js'
 import { ProductCard } from './ProductCard.jsx'
 
 export function Products ({ products }) {
-  const { cart, addToCart, removeToCart } = useCart()
-
-  const checkProductInCart = (product) => {
-    return cart.some(item => item.id === product.id)
-  }
+  const { addToCart, removeToCart, checkProductInCart } = useCart()
 
   return (
     <main className='cont-products-grid'>

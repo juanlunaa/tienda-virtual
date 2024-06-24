@@ -24,16 +24,18 @@ function App () {
 
   return (
     <CartProvider>
-      <div>
-        <header>
-          <h1>Shoes Store</h1>
-          <FormSearch productSearch={productSearch} changeSearchInpur={changeSearchInpur} />
-        </header>
+      <div style={{ display: 'flex' }}>
+        <div style={{ flexGrow: 1 , margin: '0 16px'}}>
+          <header>
+            <h1>Shoes Store</h1>
+            <FormSearch productSearch={productSearch} changeSearchInpur={changeSearchInpur} />
+          </header>
+          <main className='cont-products'>
+            <Filters />
+            <Products products={filteredProducts} />
+          </main>
+        </div>
         <Cart />
-        <main className='cont-products'>
-          <Filters />
-          <Products products={filteredProducts} />
-        </main>
         {
           openModal &&
             <Modal isOpen={openModal} closeModal={closeModal}>

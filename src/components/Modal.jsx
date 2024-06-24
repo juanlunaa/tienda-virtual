@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import './css/Modal.css'
 
 export function Modal ({ children, isOpen, closeModal }) {
