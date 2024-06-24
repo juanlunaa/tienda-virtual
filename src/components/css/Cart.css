@@ -5,7 +5,8 @@
 .cart {
   opacity: 0;
   padding: 0;
-  height: 100vh;
+  display: none;
+  height: 100lvh;
   position: fixed;
   top: 0;
   right: 0;
